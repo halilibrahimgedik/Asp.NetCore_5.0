@@ -1,0 +1,23 @@
+﻿@model AspDotnetCoreWorkshop.Models.Product
+
+<form asp-action="CreateProduct" asp-controller="Workshop" method="post">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" asp-for="Name" placeholder="Enter a Product Name" />
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <input class="form-control" asp-for="Price" placeholder="Enter a Product Price" />
+    </div>
+
+    <div class="form-group">
+        <label>Quantity</label>
+        <input class="form-control" asp-for="Quantity" placeholder="Enter a Product Quantity" />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
