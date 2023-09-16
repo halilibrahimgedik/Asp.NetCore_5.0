@@ -1,0 +1,21 @@
+﻿@model AspDotnetCoreWorkshop.Models.User
+
+<form method="post">
+
+    <div asp-validation-summary="All" class="card-body text-danger">
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" asp-for="NameSurname" type="text"/>
+        <span asp-validation-for="NameSurname" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" asp-for="Email" type="email"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-danger" type="submit">Submit</button>
+</form>

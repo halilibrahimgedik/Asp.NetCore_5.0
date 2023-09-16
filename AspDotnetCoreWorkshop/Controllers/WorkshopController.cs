@@ -74,7 +74,22 @@ namespace AspDotnetCoreWorkshop.Controllers
             return View();
         }
 
-       
+        public IActionResult ValidationsWithDataAnnatations()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ValidationsWithDataAnnatations(User user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(user);
+            }
+            else
+            {
+                return View();
+            }
+        }
 
     }
 }
