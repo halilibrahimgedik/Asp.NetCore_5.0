@@ -62,10 +62,19 @@ namespace AspDotnetCoreWorkshop.Controllers
             return RedirectToAction("CreateProduct");
         }
 
-        // QueryString İle Kullanıcıdan Veri Alma
+        // !QueryString İle Kullanıcıdan Veri Alma
         public IActionResult GetDataWithQueryString(string isim, int yas)
         {
             return View();
         }
+
+        //!QueryString İle Model üzerinden veri taşıma
+        public IActionResult GetDataWithModelQueryString(Model model)
+        {
+            return View();
+        }
+
+       
+
     }
 }
