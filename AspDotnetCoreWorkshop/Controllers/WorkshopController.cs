@@ -1,5 +1,6 @@
 ﻿using AspDotnetCoreWorkshop.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace AspDotnetCoreWorkshop.Controllers
 {
@@ -59,6 +60,12 @@ namespace AspDotnetCoreWorkshop.Controllers
 
 
             return RedirectToAction("CreateProduct");
+        }
+
+        // QueryString İle Kullanıcıdan Veri Alma
+        public IActionResult GetDataWithQueryString(string isim, int yas)
+        {
+            return View();
         }
     }
 }
