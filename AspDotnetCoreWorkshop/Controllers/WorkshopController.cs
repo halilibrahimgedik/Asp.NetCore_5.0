@@ -74,6 +74,7 @@ namespace AspDotnetCoreWorkshop.Controllers
             return View();
         }
 
+        // ! DataAnnatations ile Validasyon
         public IActionResult ValidationsWithDataAnnatations()
         {
             return View();
@@ -91,5 +92,21 @@ namespace AspDotnetCoreWorkshop.Controllers
             }
         }
 
+        // ! FluentValidation ile Validasyon
+        public IActionResult FluentValidations()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult FluentValidations(Product product)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(product);
+            }
+            else
+                return View();
+        }
     }
 }
