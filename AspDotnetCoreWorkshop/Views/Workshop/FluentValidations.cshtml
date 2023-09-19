@@ -1,0 +1,27 @@
+﻿@model AspDotnetCoreWorkshop.Models.Product
+
+<form method="post">
+
+    <div asp-validation-summary="All" class="card-body text-danger">
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" asp-for="Name" type="text" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <input class="form-control" asp-for="Price" type="text" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Quantity</label>
+        <input class="form-control" asp-for="Quantity" type="text" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-danger" type="submit">Submit</button>
+</form>
