@@ -51,8 +51,14 @@ namespace AspDotnetCoreWorkshop
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "RouteParameter",
+                    pattern: "{controller=Workshop}/{action=Routee}/{yas}/{ad}");
+
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Workshop}/{action=Index}/{id?}");
+
+                
             });
         }
     }

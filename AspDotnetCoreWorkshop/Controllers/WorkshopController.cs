@@ -74,6 +74,12 @@ namespace AspDotnetCoreWorkshop.Controllers
             return View();
         }
 
+        //!Route Parameter İle veri taşıma
+        public IActionResult RouteParameter(int yas, string ad)
+        {
+            return View();
+        }
+
         // ! DataAnnatations ile Validasyon
         public IActionResult ValidationsWithDataAnnatations()
         {
@@ -108,5 +114,7 @@ namespace AspDotnetCoreWorkshop.Controllers
             else
                 return View();
         }
+
+       
     }
 }
